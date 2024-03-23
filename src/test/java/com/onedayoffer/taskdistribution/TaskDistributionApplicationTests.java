@@ -94,6 +94,21 @@ class TaskDistributionApplicationTests {
 	}
 
 	@Test
+	void shouldReturn404WhenEmployeeNotFound() throws Exception {
+		this.mockMvc.perform(get("/employees/100"))
+				.andDo(print())
+				.andExpect(status().isNotFound());
+	}
+
+	@Test
+	void shouldReturn400WhenIllegalTaskStatus() throws Exception {
+		this.mockMvc.perform(patch("/employees/5/tasks/13/status")
+				.queryParam("newStatus","WRONG_STATUS"))
+				.andDo(print())
+				.andExpect(status().isBadRequest());
+	}
+
+	@Test
 	void shouldPostNewTask() throws Exception {
 		String request = "{ \"name\": " +
 				"\"new-task-123\", " +

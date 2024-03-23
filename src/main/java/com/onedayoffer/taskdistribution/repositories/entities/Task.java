@@ -1,8 +1,9 @@
 package com.onedayoffer.taskdistribution.repositories.entities;
 
-import com.onedayoffer.taskdistribution.DTO.TaskStatus;
-import com.onedayoffer.taskdistribution.DTO.TaskType;
+import com.onedayoffer.taskdistribution.dto.TaskStatus;
+import com.onedayoffer.taskdistribution.dto.TaskType;
 import jakarta.persistence.*;
+
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity

@@ -1,4 +1,4 @@
-package com.onedayoffer.taskdistribution.DTO;
+package com.onedayoffer.taskdistribution.dto;
 
 public enum TaskType {
     INVENTORY,

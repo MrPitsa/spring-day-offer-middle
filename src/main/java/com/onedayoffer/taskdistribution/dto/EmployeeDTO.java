@@ -1,4 +1,4 @@
-package com.onedayoffer.taskdistribution.DTO;
+package com.onedayoffer.taskdistribution.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,7 +20,7 @@ public class EmployeeDTO {
     }
 
     public Integer getTotalLeadTime() {
-        if (tasks.size() == 0) return 0;
+        if (tasks.isEmpty()) return 0;
         else return tasks.stream().mapToInt(TaskDTO::getLeadTime).sum();
     }
 }

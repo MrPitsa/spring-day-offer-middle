@@ -1,5 +1,7 @@
-package com.onedayoffer.taskdistribution.DTO;
+package com.onedayoffer.taskdistribution.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TaskDTO {
     private Integer id;
+    @NotNull
+    @NotBlank
     private String name;
     private TaskType taskType;
     private TaskStatus status;
